@@ -1,0 +1,121 @@
+.maxWidth {
+    display: flex;
+    justify-content: center;
+}
+
+.globalContainer {
+    max-width: 1600px;
+    max-width: 100%;
+
+        p {
+        margin: 1rem;
+        padding: 0 10px;
+        }
+}
+
+.titleWrapper {
+    display: flex;
+    position: relative;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.separatorContainer {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.separator {
+    height: 0.2px;
+    background-color: #999999;
+    width: 40%;
+    max-width: 600px;
+}
+.generalContainer {
+    padding: 20px;
+}
+
+.categoriesContainer {
+    margin: 5px 0;
+}
+
+.titleContentWrapper {
+    display: flex; 
+    justify-content: space-between;
+
+    @media (max-width: 650px) {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+}
+
+.textContainer {
+    flex: 1;
+    text-align: center;
+
+    
+    p {
+        margin: 16px 0; 
+
+        @media (max-width: 650px) {
+            margin: 10px 0;
+        }
+    }
+    
+}
+
+.imageContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageContainer img {
+    max-width: 100%;
+    height: auto;
+}
+
+.competencesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    
+    .skillsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .sideSkillsContainer {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        justify-content: space-around;
+
+        .languagesContainer,
+        .othersContainer {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            justify-content: baseline;
+
+            & > p {
+                padding: 0 5px;
+                margin: 5px 0;
+                background-color: none;
+            }
+        }
+    }
+}

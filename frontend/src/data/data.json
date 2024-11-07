@@ -1,0 +1,69 @@
+[
+    {
+		"id": 1,
+        "url": "https://github.com/Mikelcks/OpenClassrooms_ML.git",
+		"title": "Projet scolaire - Booki",
+		"type": "HTML - CSS",
+		"description": "Création de la page d'accueil d'une agence de voyage en utilisant HTML & CSS. Page responive adaptée aux différents supports.",
+		"pictures": [
+		"https://raw.githubusercontent.com/Mikelcks/MonSite/refs/heads/main/frontend/src/assets/images_website/Booki/Booki1.webp",
+		"https://raw.githubusercontent.com/Mikelcks/MonSite/refs/heads/main/frontend/src/assets/images_website/Booki/Booki2.webp",
+		"https://raw.githubusercontent.com/Mikelcks/MonSite/refs/heads/main/frontend/src/assets/images_website/Booki/Booki3.webp",
+		"https://raw.githubusercontent.com/Mikelcks/MonSite/refs/heads/main/frontend/src/assets/images_website/Booki/Booki4.webp",
+		"https://raw.githubusercontent.com/Mikelcks/MonSite/refs/heads/main/frontend/src/assets/images_website/Booki/Booki5.webp"
+		]
+	},
+    {
+		"id": 2,
+        "url": "https://github.com/Mikelcks/OC_Projet_3_Sophie_Buel.git",
+		"title": "Projet scolaire - Sophie Buel",
+		"type": "Frontend - JavaScript",
+		"description": "Création d'une page web dynamique en utilisant JavaScript et en communiquant avec une API. Création d'une page de connexion et d'une modale permettant d'uploader de nouveaux médias.",
+		"pictures": [
+		"https://raw.githubusercontent.com/Mikelcks/MonSite/refs/heads/main/frontend/src/assets/images_website/Sophie_Buel/Sophie_Buel1.webp",
+		"https://raw.githubusercontent.com/Mikelcks/MonSite/refs/heads/main/frontend/src/assets/images_website/Sophie_Buel/Sophie_Buel2.webp",
+		"https://raw.githubusercontent.com/Mikelcks/MonSite/refs/heads/main/frontend/src/assets/images_website/Sophie_Buel/Sophie_Buel3.webp"
+		]
+	},
+	{
+		"id": 3,
+        "url": "https://github.com/Mikelcks/OC_Projet_5_Nina_Carducci.git",
+		"title": "Projet scolaire - Nina Carducci",
+		"type": "Débug & Optimisation",
+		"description": "Débuggage du site web et optimisation du SEO ainsi que des images importées sur le site.",
+		"pictures": [
+		"https://raw.githubusercontent.com/Mikelcks/MonSite/refs/heads/main/frontend/src/assets/images_website/Nina_Carducci/Nina_Carducci1.webp",
+		"https://raw.githubusercontent.com/Mikelcks/MonSite/refs/heads/main/frontend/src/assets/images_website/Nina_Carducci/Nina_Carducci2.webp",
+		"https://raw.githubusercontent.com/Mikelcks/MonSite/refs/heads/main/frontend/src/assets/images_website/Nina_Carducci/Nina_Carducci3.webp"
+		]
+	},
+    {
+		"id": 4,
+        "url": "https://github.com/Mikelcks/OC_Projet_6_Kasa.git",
+		"title": "Projet scolaire - Kasa",
+		"type": "Frontend - React",
+		"description": "Création du frontend en react pour un site de location immobilière a partir de données fournies dans un fichier .json",
+		"pictures": [
+		"https://raw.githubusercontent.com/Mikelcks/MonSite/refs/heads/main/frontend/src/assets/images_website/Kasa/Kasa1.webp",
+		"https://raw.githubusercontent.com/Mikelcks/MonSite/refs/heads/main/frontend/src/assets/images_website/Kasa/Kasa2.webp",
+		"https://raw.githubusercontent.com/Mikelcks/MonSite/refs/heads/main/frontend/src/assets/images_website/Kasa/Kasa3.webp",
+		"https://raw.githubusercontent.com/Mikelcks/MonSite/refs/heads/main/frontend/src/assets/images_website/Kasa/Kasa4.webp",
+		"https://raw.githubusercontent.com/Mikelcks/MonSite/refs/heads/main/frontend/src/assets/images_website/Kasa/Kasa5.webp",
+		"https://raw.githubusercontent.com/Mikelcks/MonSite/refs/heads/main/frontend/src/assets/images_website/Kasa/Kasa6.webp",
+		"https://raw.githubusercontent.com/Mikelcks/MonSite/refs/heads/main/frontend/src/assets/images_website/Kasa/Kasa7.webp"
+		]
+	},
+	{
+		"id": 5,
+        "url": "https://github.com/Mikelcks/P7_MonVieuxGrimoire.git",
+		"title": "Projet scolaire - Mon vieux grimoire",
+		"type": "Backend - Node.js / Express",
+		"description": "Création d'un serveur avec Express et connexion à une base de donnée MongoDB. Getion de la mise en place de la structure du serveur et gestion de la communication entre le serveur et la base de donnée. Implantation d'un système d'authentification sécurisé.",
+		"pictures": [
+		"https://raw.githubusercontent.com/Mikelcks/MonSite/refs/heads/main/frontend/src/assets/images_website/Mon_Vieux_Grimoire/Mon_Vieux_Grimoire1.webp",
+		"https://raw.githubusercontent.com/Mikelcks/MonSite/refs/heads/main/frontend/src/assets/images_website/Mon_Vieux_Grimoire/Mon_Vieux_Grimoire2.webp",
+		"https://raw.githubusercontent.com/Mikelcks/MonSite/refs/heads/main/frontend/src/assets/images_website/Mon_Vieux_Grimoire/Mon_Vieux_Grimoire3.webp",
+		"https://raw.githubusercontent.com/Mikelcks/MonSite/refs/heads/main/frontend/src/assets/images_website/Mon_Vieux_Grimoire/Mon_Vieux_Grimoire4.webp"
+		]
+	}
+]

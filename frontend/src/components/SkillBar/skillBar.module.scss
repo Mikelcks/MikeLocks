@@ -1,0 +1,32 @@
+.skillBar {
+    flex-basis: calc(50% - 20px);
+    max-width: 90%;
+    margin: 10px 0;
+
+    @media (max-width: 850px) {
+        flex-basis: 100%;
+    }
+    
+    .progressBar {
+        background-color: #e0e0e0;
+        border-radius: 12.5px;
+        overflow: hidden;
+        height: 25px;
+
+        .progress {
+            background-color: #00bcd4;
+            height: 100%;
+            transition: width 0.4s ease;
+
+            .progressText {
+                padding-left: 10px;
+                white-space: nowrap;
+                font-size: 1rem;
+
+                @media (max-width: 450px) {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}
