@@ -1,4 +1,6 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
+import { Link } from 'react-router-dom'
 import Lottie from 'lottie-react';
 import performance from '../../assets/performance.json'
 import newWebsite from '../../assets/website.json'
@@ -20,7 +22,9 @@ function Home() {
                 </div>
                 <div className={styles.overlayTextBot}>
                     <span className={styles.description}>Conception française, pour un site qui vous ressemble.</span>
-                    <a href="/contact" className={styles.link}>Demander un devis</a>
+                    <Link to={`/contact`}>
+                        <a className={styles.link}>Demander un devis</a>
+                    </Link>
                 </div>
             </div>
         </div>
