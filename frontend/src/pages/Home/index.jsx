@@ -13,21 +13,20 @@ function Home() {
       <div className={styles.videoBackground}>
         <video autoPlay loop muted className={styles.video} playsInline>
         <source src="videos/home.mp4" type="video/mp4" />
-
         </video>
-            <div className={styles.overlayText}>
-                <div className={styles.overlayTextTop}>
-                    <h1>DÉVELOPPEMENT DE SITES WEB</h1>
-                    <div className={styles.subtitle}>TRANSFORMEZ VOS IDÉES EN RÉALITÉ DIGITALE</div>
-                </div>
-                <div className={styles.overlayTextBot}>
-                    <span className={styles.description}>Conception française, pour un site qui vous ressemble.</span>
-                    <Link to={`/contact`}>
-                        <a className={styles.link}>Demander un devis</a>
-                    </Link>
-                </div>
+        <div className={styles.overlayText}>
+            <div className={styles.overlayTextTop}>
+                <h1>DÉVELOPPEMENT DE SITES WEB</h1>
+                <div className={styles.subtitle}>TRANSFORMEZ VOS IDÉES EN RÉALITÉ DIGITALE</div>
+            </div>
+            <div className={styles.overlayTextBot}>
+                <span className={styles.description}>Conception française, pour un site qui vous ressemble.</span>
+                <Link to={`/contact`} className={styles.link}>
+                    Demander un devis
+                </Link>
             </div>
         </div>
+    </div>
 
         <section className={styles.content}>
             <div className={styles.imageTextRow}>
@@ -44,8 +43,12 @@ function Home() {
                             Ne laissez pas vos concurrents vous devancer ! Offrez à votre entreprise un site web sur mesure qui reflète votre identité et engage vos visiteurs. Contactez-moi pour donner vie à votre projet et transformer votre présence en ligne en un véritable atout.
                         </p>
                         <div className={styles.separator}></div>
-                        {/* <a href="/services" className={styles.link}>En savoir plus sur nos services</a> */}
-                        <a href="/contact" className={styles.link}>Prenez contact avec moi</a>
+                        {/* <Link to={`/services`} className={styles.link}>
+                            En savoir plus sur nos services
+                        </Link> */}
+                        <Link to={`/contact`} className={styles.link}>
+                            Prenez contact avec moi
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -82,8 +85,12 @@ function Home() {
                             Si nécessaire, je peux également vous proposer une campagne Google Ads pour maximiser votre visibilité. Grâce à un SEO de qualité, votre site sera mieux référencé, attirant de nouveaux clients et augmentant le nombre de visiteurs.
                         </p>
                         <div className={styles.separator}></div>
-                        {/* <a href="/services" className={styles.link}>En savoir plus sur nos services</a> */}
-                        <a href="/contact" className={styles.link}>Prenez contact avec moi</a>
+                        {/* <Link to={`/services`} className={styles.link}>
+                            En savoir plus sur nos services
+                        </Link> */}
+                        <Link to={`/contact`} className={styles.link}>
+                            Prenez contact avec moi
+                        </Link>
                     </div>
                 </div>
             </div>
