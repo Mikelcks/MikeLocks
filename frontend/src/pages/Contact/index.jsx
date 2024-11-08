@@ -1,13 +1,59 @@
 import React, { useState } from 'react';
 import styles from './contact.module.scss';
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
+
+const MySwal = withReactContent(Swal);
 
 const Contact = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
+    // Expression régulière pour valider l'email
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+    // Fonction de validation
+    const validateEmail = (email) => {
+        return emailRegex.test(email);
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        // Validation de l'email
+        if (!validateEmail(email)) {
+            MySwal.fire({
+                title: "Erreur",
+                text: "L'email fourni n'est pas valide.",
+                icon: "error",
+                confirmButtonText: "OK",
+                confirmButtonColor: "orange",
+                width: "400px",
+                padding: "20px",
+                customClass: {
+                    popup: 'custom-alert',
+                },
+                didOpen: () => {
+                    setTimeout(() => {
+                        const popup = document.querySelector('.swal2-popup');
+                        if (popup) {
+                            popup.style.display = 'flex';
+                            popup.style.flexDirection = 'column';
+                            popup.style.justifyContent = 'center';
+                            popup.style.alignItems = 'center';
+                            popup.style.textAlign = 'center';
+
+                            const title = document.querySelector('.swal2-title');
+                            if (title) {
+                                title.style.padding = '5px';
+                            }
+                        }
+                    }, 0); // Applique le style immédiatement après le rendu
+                }
+            });
+            return; // Empêche l'envoi du formulaire si l'email est invalide
+        }
 
         const formData = { name, email, message };
 
@@ -20,17 +66,100 @@ const Contact = () => {
                 body: JSON.stringify(formData),
             });
 
-            const data = await response.json();
-
             if (response.ok) {
-                console.log('Email envoyé:', data);
+                MySwal.fire({
+                    title: "Message envoyé !",
+                    text: "Votre message a bien été envoyé.",
+                    icon: "success",
+                    confirmButtonText: "OK",
+                    confirmButtonColor: "orange",
+                    width: "400px", 
+                    padding: "20px", 
+                    customClass: {
+                        popup: 'popup-container' 
+                    },
+                    didOpen: () => {
+                        setTimeout(() => {
+                            const popup = document.querySelector('.swal2-popup');
+                            if (popup) {
+                                popup.style.display = 'flex';
+                                popup.style.flexDirection = 'column';
+                                popup.style.justifyContent = 'center';
+                                popup.style.alignItems = 'center';
+                                popup.style.textAlign = 'center';
+
+                                const title = document.querySelector('.swal2-title');
+                                if (title) {
+                                    title.style.padding = '5px';
+                                }
+                            }
+                        }, 0); // Applique le style immédiatement après le rendu
+                    }
+                });
             } else {
-                console.log('Erreur:', data.message);
+                MySwal.fire({
+                    title: "Erreur",
+                    text: "Erreur lors de l'envoi du message.",
+                    icon: "error",
+                    confirmButtonText: "OK",
+                    confirmButtonColor: "orange",
+                    width: "400px",
+                    padding: "20px",
+                    customClass: {
+                        popup: 'custom-alert',
+                    },
+                    didOpen: () => {
+                        setTimeout(() => {
+                            const popup = document.querySelector('.swal2-popup');
+                            if (popup) {
+                                popup.style.display = 'flex';
+                                popup.style.flexDirection = 'column';
+                                popup.style.justifyContent = 'center';
+                                popup.style.alignItems = 'center';
+                                popup.style.textAlign = 'center';
+
+                                const title = document.querySelector('.swal2-title');
+                                if (title) {
+                                    title.style.padding = '5px';
+                                }
+                            }
+                        }, 0); // Applique le style immédiatement après le rendu
+                    }
+                });
             }
         } catch (error) {
-            console.log('Erreur lors de l\'envoi:', error);
+            MySwal.fire({
+                title: "Erreur",
+                text: "Erreur lors de l'envoi du message.",
+                icon: "error",
+                confirmButtonText: "OK",
+                confirmButtonColor: "orange",
+                width: "400px",
+                padding: "20px",
+                customClass: {
+                    popup: 'custom-alert',
+                },
+                didOpen: () => {
+                    setTimeout(() => {
+                        const popup = document.querySelector('.swal2-popup');
+                        if (popup) {
+                            popup.style.display = 'flex';
+                            popup.style.flexDirection = 'column';
+                            popup.style.justifyContent = 'center';
+                            popup.style.alignItems = 'center';
+                            popup.style.textAlign = 'center';
+
+                            const title = document.querySelector('.swal2-title');
+                            if (title) {
+                                title.style.padding = '5px';
+                            }
+                        }
+                    }, 0); // Applique le style immédiatement après le rendu
+                }
+            });
         }
 
+        // Réinitialisation des champs
         setName('');
         setEmail('');
         setMessage('');

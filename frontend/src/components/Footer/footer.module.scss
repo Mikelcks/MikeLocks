@@ -46,7 +46,11 @@ p {
 .navItem {
     position: relative;
     padding: 0 20px;
-    width: min-content;
+    width: auto;
+
+    @media (max-width: 850px) {
+        width: min-content;
+    }
 }
 
 .navItem:not(:last-child)::after {
