@@ -22,6 +22,7 @@
     max-width: 100%;
 }
 
+
 .separatorContainer {
     display: flex;
     justify-content: center;
@@ -45,10 +46,16 @@
 .titleContentWrapper {
     display: flex; 
     justify-content: space-between;
+    align-items: center;
+
+    img {
+        max-height: 400px;
+    }
 
     @media (max-width: 650px) {
         flex-direction: column-reverse;
         justify-content: center;
+        gap: 20px;
     }
 }
 

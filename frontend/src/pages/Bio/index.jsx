@@ -12,7 +12,7 @@ function Bio() {
                 </div>
                 <div className={styles.titleContentWrapper}>
                     <div className={styles.imageContainer}>
-                        <img src="" alt="Description de l'image" />
+                        <img src="images/portrait.jpg" alt="Mon portrait" />
                     </div>
                     <div className={styles.textContainer}>
                         <p>Nom : LOCKS</p>
