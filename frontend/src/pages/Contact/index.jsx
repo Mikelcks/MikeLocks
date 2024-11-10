@@ -99,7 +99,7 @@ const Contact = () => {
             } else {
                 MySwal.fire({
                     title: "Erreur",
-                    text: "Erreur lors de l'envoi du message.",
+                    text: "Erreur lors de l'envoi du message. Vous pouvez prendre contact avec moi directement a l'adresse mail suivante : mikelcks57@gmail.com",
                     icon: "error",
                     confirmButtonText: "OK",
                     confirmButtonColor: "orange",
@@ -130,7 +130,7 @@ const Contact = () => {
         } catch (error) {
             MySwal.fire({
                 title: "Erreur",
-                text: "Erreur lors de l'envoi du message.",
+                text: "Erreur lors de l'envoi du message. Vous pouvez prendre contact avec moi directement a l'adresse mail suivante : mikelcks57@gmail.com",
                 icon: "error",
                 confirmButtonText: "OK",
                 confirmButtonColor: "orange",

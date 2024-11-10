@@ -13,16 +13,6 @@
         }
 }
 
-.titleWrapper {
-    display: flex;
-    position: relative;
-    margin-bottom: 20px;
-    align-items: center;
-    justify-content: center;
-    max-width: 100%;
-}
-
-
 .separatorContainer {
     display: flex;
     justify-content: center;
@@ -37,6 +27,15 @@
 }
 .generalContainer {
     padding: 20px;
+}
+
+.titleWrapper {
+    display: flex;
+    position: relative;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
 }
 
 .categoriesContainer {
