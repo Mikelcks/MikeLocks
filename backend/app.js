@@ -6,7 +6,13 @@ require('dotenv').config();
 
 const app = express();
 
-app.use(cors());
+// Configuration CORS pour autoriser uniquement les requêtes depuis votre site et localhost en développement
+const corsOptions = {
+    origin: ['https://mikelocks.onrender.com', 'http://localhost:3000'],
+    optionsSuccessStatus: 200 
+};
+
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 // Route pour gérer l'envoi de l'e-mail
