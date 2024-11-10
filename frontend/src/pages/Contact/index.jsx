@@ -58,7 +58,7 @@ const Contact = () => {
         const formData = { name, email, message };
 
         try {
-            const response = await fetch('http://localhost:5000/send-email', {
+            const response = await fetch('https://mikelocks.onrender.com/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -130,7 +130,7 @@ const Contact = () => {
         } catch (error) {
             MySwal.fire({
                 title: "Erreur",
-                text: "Erreur lors de l'envoi du message. Vous pouvez prendre contact avec moi directement a l'adresse mail suivante : mikelcks57@gmail.com",
+                text: "Erreur lors de l'envoi du message.Vous pouvez prendre contact avec moi directement a l'adresse mail suivante : mikelcks57@gmail.com",
                 icon: "error",
                 confirmButtonText: "OK",
                 confirmButtonColor: "orange",
