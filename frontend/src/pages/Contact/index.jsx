@@ -13,7 +13,7 @@ const Contact = () => {
     // Expression régulière pour valider l'email
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
-    // Fonction de validation de l'email
+    // Fonction de validation
     const validateEmail = (email) => {
         return emailRegex.test(email);
     };
@@ -58,8 +58,7 @@ const Contact = () => {
         const formData = { name, email, message };
 
         try {
-            // Remplacer l'URL par celle du backend sur Render ou localhost
-            const response = await fetch('https://mikelocks.onrender.com/send-email', {
+            const response = await fetch('http://localhost:5000/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -74,10 +73,10 @@ const Contact = () => {
                     icon: "success",
                     confirmButtonText: "OK",
                     confirmButtonColor: "orange",
-                    width: "400px",
-                    padding: "20px",
+                    width: "400px", 
+                    padding: "20px", 
                     customClass: {
-                        popup: 'popup-container'
+                        popup: 'popup-container' 
                     },
                     didOpen: () => {
                         setTimeout(() => {
@@ -100,7 +99,7 @@ const Contact = () => {
             } else {
                 MySwal.fire({
                     title: "Erreur",
-                    text: "Erreur lors de l'envoi du message. Vous pouvez prendre contact avec moi directement à l'adresse mail suivante : mikelcks57@gmail.com",
+                    text: "Erreur lors de l'envoi du message. Vous pouvez prendre contact avec moi directement a l'adresse mail suivante : mikelcks57@gmail.com",
                     icon: "error",
                     confirmButtonText: "OK",
                     confirmButtonColor: "orange",
@@ -124,14 +123,14 @@ const Contact = () => {
                                     title.style.padding = '5px';
                                 }
                             }
-                        }, 0);
+                        }, 0); // Applique le style immédiatement après le rendu
                     }
                 });
             }
         } catch (error) {
             MySwal.fire({
                 title: "Erreur",
-                text: "Erreur lors de l'envoi du message. Vous pouvez prendre contact avec moi directement à l'adresse mail suivante : mikelcks57@gmail.com",
+                text: "Erreur lors de l'envoi du message.Vous pouvez prendre contact avec moi directement a l'adresse mail suivante : mikelcks57@gmail.com",
                 icon: "error",
                 confirmButtonText: "OK",
                 confirmButtonColor: "orange",
@@ -155,7 +154,7 @@ const Contact = () => {
                                 title.style.padding = '5px';
                             }
                         }
-                    }, 0);
+                    }, 0); // Applique le style immédiatement après le rendu
                 }
             });
         }
@@ -181,6 +180,7 @@ const Contact = () => {
                         required
                         className={styles.inputField}
                     />
+
                     <label htmlFor="email">Email:</label>
                     <input
                         type="email"
@@ -190,6 +190,7 @@ const Contact = () => {
                         required
                         className={styles.inputField}
                     />
+
                     <label htmlFor="message">Message:</label>
                     <textarea
                         id="message"
@@ -198,6 +199,7 @@ const Contact = () => {
                         required
                         className={styles.textareaField}
                     />
+
                     <button type="submit" className={styles.submitButton}>Envoyer</button>
                 </form>
             </div>
