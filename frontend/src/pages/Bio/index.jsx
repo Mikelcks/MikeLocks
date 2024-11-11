@@ -54,6 +54,9 @@ function Bio() {
                 <div className={styles.titleWrapper}>
                     <h2>FORMATONS</h2>
                 </div>
+                <h3>2023 - 2024 | Certification Développeur intégrateur web <br />
+                    OpenClassrooms, 100% en ligne
+                </h3>
                 <h3>2015 - 2016 | Licence Professionnelle MCPA <br />
                     IUT Génie Mécanique, Metz Saulcy
                 </h3>

@@ -6,7 +6,17 @@ require('dotenv').config();
 
 const app = express();
 
-app.use(cors());
+// Définir les options CORS
+const corsOptions = {
+    origin: 'https://votre-frontend.com', // Remplacez par l'URL de votre frontend
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type'],
+};
+
+// Appliquer la configuration CORS
+app.use(cors(corsOptions));
+
+// Middleware pour parser le corps de la requête en JSON
 app.use(bodyParser.json());
 
 // Route pour gérer l'envoi de l'e-mail
@@ -42,4 +52,5 @@ app.post('/send-email', async (req, res) => {
     }
 });
 
+// Exporter l'application
 module.exports = app;
