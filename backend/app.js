@@ -8,7 +8,7 @@ const app = express();
 
 // Définir les options CORS
 const corsOptions = {
-    origin: 'https://votre-frontend.com', // Remplacez par l'URL de votre frontend
+    origin: 'https://mikelocks.onrender.com', // Remplacez par l'URL de votre frontend
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type'],
 };
@@ -25,6 +25,7 @@ app.post('/send-email', async (req, res) => {
 
     // Configuration de Nodemailer
     const transporter = nodemailer.createTransport({
+        secure: true,
         host: "smtp.gmail.com",
         port: 465,
         auth: {
