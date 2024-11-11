@@ -49,10 +49,10 @@ const Contact = () => {
                                 title.style.padding = '5px';
                             }
                         }
-                    }, 0); // Applique le style immédiatement après le rendu
+                    }, 0);
                 }
             });
-            return; // Empêche l'envoi du formulaire si l'email est invalide
+            return;
         }
 
         const formData = { name, email, message };
@@ -93,7 +93,7 @@ const Contact = () => {
                                     title.style.padding = '5px';
                                 }
                             }
-                        }, 0); // Applique le style immédiatement après le rendu
+                        }, 0);
                     }
                 });
             } else {
@@ -123,7 +123,7 @@ const Contact = () => {
                                     title.style.padding = '5px';
                                 }
                             }
-                        }, 0); // Applique le style immédiatement après le rendu
+                        }, 0);
                     }
                 });
             }
@@ -154,12 +154,11 @@ const Contact = () => {
                                 title.style.padding = '5px';
                             }
                         }
-                    }, 0); // Applique le style immédiatement après le rendu
+                    }, 0);
                 }
             });
         }
 
-        // Réinitialisation des champs
         setName('');
         setEmail('');
         setMessage('');

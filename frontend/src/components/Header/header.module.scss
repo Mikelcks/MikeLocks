@@ -1,3 +1,5 @@
+@import '../../utils/style/variables';
+
 .headerBackground {
     display: flex;
     justify-content: center;
@@ -76,7 +78,7 @@
         }
 
         &:hover {
-            color: #FF8C00;
+            color: $primary-color;
 
             &::before,
             &::after {
@@ -86,7 +88,7 @@
         }
 
         &.active {
-            color: #FF8C00;
+            color: $primary-color;
         }
     }
 }

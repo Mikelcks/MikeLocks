@@ -1,3 +1,5 @@
+@import '../../utils/style/variables';
+
 .contactBackground {
     background-image: url('../../../public/images/contact_background.jpg');
     background-size: cover; 
@@ -44,7 +46,7 @@
     width: 40%;
     max-width: 400px;
 
-    background-color: #FF8C00;
+    background-color: $primary-color;
     margin-bottom: 10px;
 }
 
@@ -81,7 +83,7 @@
     }
 
     .submitButton {
-        background-color: #FF8C00;
+        background-color: $primary-color;
         color: black;
         font-size: 20px;
         font-weight: 400;

@@ -34,31 +34,31 @@ app.post('/send-email', async (req, res) => {
     // Configuration de Nodemailer
     const transporter = nodemailer.createTransport({
         host: 'smtp.gmail.com',
-        port: 465, // Ou utilise 587 si nécessaire
-        secure: true, // True si le port est 465
+        port: 465,
+        secure: true, 
         auth: {
-            user: process.env.EMAIL_USER, // Assurez-vous que cette variable est correcte
-            pass: process.env.EMAIL_PASS, // Assurez-vous que cette variable est correcte
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS,
         },
     });
 
     // Définition des options de l'e-mail
     const mailOptions = {
         from: email,
-        to: process.env.EMAIL_USER, // Ton adresse email
+        to: process.env.EMAIL_USER,
         subject: `Nouveau message de ${name}`,
         text: `Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
     };
 
-    console.log('Tentative d\'envoi de l\'email...'); // Log pour vérifier que Nodemailer est appelé
+    console.log('Tentative d\'envoi de l\'email...');
 
     // Envoi de l'e-mail via Nodemailer
     try {
         const info = await transporter.sendMail(mailOptions);
-        console.log('Email envoyé:', info); // Log si l'email est envoyé avec succès
+        console.log('Email envoyé:', info);
         res.status(200).json({ message: 'Email envoyé avec succès!' });
     } catch (error) {
-        console.error('Erreur lors de l\'envoi de l\'email:', error); // Log en cas d'erreur
+        console.error('Erreur lors de l\'envoi de l\'email:', error);
         res.status(500).json({ message: 'Erreur lors de l\'envoi de l\'email' });
     }
 });
