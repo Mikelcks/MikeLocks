@@ -6,9 +6,8 @@ require('dotenv').config();
 
 const app = express();
 
-// Définir les options CORS
 const corsOptions = {
-    origin: 'https://mikelocks.onrender.com', // Remplace par l'URL de ton frontend
+    origin: 'https://mikelocks.onrender.com',
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type'],
 };
@@ -21,8 +20,8 @@ app.use(bodyParser.json());
 
 // Route pour gérer l'envoi de l'e-mail
 app.post('/send-email', async (req, res) => {
-    console.log('POST /send-email reçu'); // Log pour vérifier que la route est atteinte
-    console.log('Body:', req.body); // Log pour afficher le contenu du corps de la requête
+    console.log('POST /send-email reçu');
+    console.log('Body:', req.body);
 
     const { name, email, message } = req.body;
 

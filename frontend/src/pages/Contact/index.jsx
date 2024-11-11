@@ -58,7 +58,7 @@ const Contact = () => {
         const formData = { name, email, message };
 
         try {
-            const response = await fetch('https://mikelocks.onrender.com/send-email', {
+            const response = await fetch('https://mikelocks-backend.onrender.com/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
