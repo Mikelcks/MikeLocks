@@ -3,7 +3,40 @@ import styles from './contact.module.scss';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 
+// Créer une fonction pour gérer les alertes SweetAlert
 const MySwal = withReactContent(Swal);
+
+const showAlert = (title, text, icon) => {
+    MySwal.fire({
+        title,
+        text,
+        icon,
+        confirmButtonText: "OK",
+        confirmButtonColor: "orange",
+        width: "400px",
+        padding: "20px",
+        customClass: {
+            popup: 'custom-alert',
+        },
+        didOpen: () => {
+            setTimeout(() => {
+                const popup = document.querySelector('.swal2-popup');
+                if (popup) {
+                    popup.style.display = 'flex';
+                    popup.style.flexDirection = 'column';
+                    popup.style.justifyContent = 'center';
+                    popup.style.alignItems = 'center';
+                    popup.style.textAlign = 'center';
+
+                    const title = document.querySelector('.swal2-title');
+                    if (title) {
+                        title.style.padding = '5px';
+                    }
+                }
+            }, 0);
+        }
+    });
+};
 
 const Contact = () => {
     const [name, setName] = useState('');
@@ -23,35 +56,7 @@ const Contact = () => {
 
         // Validation de l'email
         if (!validateEmail(email)) {
-            MySwal.fire({
-                title: "Erreur",
-                text: "L'email fourni n'est pas valide.",
-                icon: "error",
-                confirmButtonText: "OK",
-                confirmButtonColor: "orange",
-                width: "400px",
-                padding: "20px",
-                customClass: {
-                    popup: 'custom-alert',
-                },
-                didOpen: () => {
-                    setTimeout(() => {
-                        const popup = document.querySelector('.swal2-popup');
-                        if (popup) {
-                            popup.style.display = 'flex';
-                            popup.style.flexDirection = 'column';
-                            popup.style.justifyContent = 'center';
-                            popup.style.alignItems = 'center';
-                            popup.style.textAlign = 'center';
-
-                            const title = document.querySelector('.swal2-title');
-                            if (title) {
-                                title.style.padding = '5px';
-                            }
-                        }
-                    }, 0);
-                }
-            });
+            showAlert("Erreur", "L'email fourni n'est pas valide.", "error");
             return;
         }
 
@@ -67,98 +72,15 @@ const Contact = () => {
             });
 
             if (response.ok) {
-                MySwal.fire({
-                    title: "Message envoyé !",
-                    text: "Votre message a bien été envoyé.",
-                    icon: "success",
-                    confirmButtonText: "OK",
-                    confirmButtonColor: "orange",
-                    width: "400px", 
-                    padding: "20px", 
-                    customClass: {
-                        popup: 'popup-container' 
-                    },
-                    didOpen: () => {
-                        setTimeout(() => {
-                            const popup = document.querySelector('.swal2-popup');
-                            if (popup) {
-                                popup.style.display = 'flex';
-                                popup.style.flexDirection = 'column';
-                                popup.style.justifyContent = 'center';
-                                popup.style.alignItems = 'center';
-                                popup.style.textAlign = 'center';
-
-                                const title = document.querySelector('.swal2-title');
-                                if (title) {
-                                    title.style.padding = '5px';
-                                }
-                            }
-                        }, 0);
-                    }
-                });
+                showAlert("Message envoyé !", "Votre message a bien été envoyé.", "success");
             } else {
-                MySwal.fire({
-                    title: "Erreur",
-                    text: "Erreur lors de l'envoi du message. Vous pouvez prendre contact avec moi directement a l'adresse mail suivante : mikelcks57@gmail.com",
-                    icon: "error",
-                    confirmButtonText: "OK",
-                    confirmButtonColor: "orange",
-                    width: "400px",
-                    padding: "20px",
-                    customClass: {
-                        popup: 'custom-alert',
-                    },
-                    didOpen: () => {
-                        setTimeout(() => {
-                            const popup = document.querySelector('.swal2-popup');
-                            if (popup) {
-                                popup.style.display = 'flex';
-                                popup.style.flexDirection = 'column';
-                                popup.style.justifyContent = 'center';
-                                popup.style.alignItems = 'center';
-                                popup.style.textAlign = 'center';
-
-                                const title = document.querySelector('.swal2-title');
-                                if (title) {
-                                    title.style.padding = '5px';
-                                }
-                            }
-                        }, 0);
-                    }
-                });
+                showAlert("Erreur", "Erreur lors de l'envoi du message. Vous pouvez prendre contact avec moi directement à l'adresse mail suivante : mikelcks57@gmail.com", "error");
             }
         } catch (error) {
-            MySwal.fire({
-                title: "Erreur",
-                text: "Erreur lors de l'envoi du message.Vous pouvez prendre contact avec moi directement a l'adresse mail suivante : mikelcks57@gmail.com",
-                icon: "error",
-                confirmButtonText: "OK",
-                confirmButtonColor: "orange",
-                width: "400px",
-                padding: "20px",
-                customClass: {
-                    popup: 'custom-alert',
-                },
-                didOpen: () => {
-                    setTimeout(() => {
-                        const popup = document.querySelector('.swal2-popup');
-                        if (popup) {
-                            popup.style.display = 'flex';
-                            popup.style.flexDirection = 'column';
-                            popup.style.justifyContent = 'center';
-                            popup.style.alignItems = 'center';
-                            popup.style.textAlign = 'center';
-
-                            const title = document.querySelector('.swal2-title');
-                            if (title) {
-                                title.style.padding = '5px';
-                            }
-                        }
-                    }, 0);
-                }
-            });
+            showAlert("Erreur", "Erreur lors de l'envoi du message. Vous pouvez prendre contact avec moi directement à l'adresse mail suivante : mikelcks57@gmail.com", "error");
         }
 
+        // Réinitialiser les champs du formulaire
         setName('');
         setEmail('');
         setMessage('');
